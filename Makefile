@@ -30,7 +30,7 @@ test-timestamp:
 	echo ${TIMESTAMP}
 
 pack:
-	dotnet pack --no-restore -o -nuget -c Release /p:Version=${VERSION}
+	dotnet pack --no-restore -o nuget -c Release /p:Version=${VERSION}
 
 publish:
 	dotnet nuget push nuget/*.nupkg -s github
