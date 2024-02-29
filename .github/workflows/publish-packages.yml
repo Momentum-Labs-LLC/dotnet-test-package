@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Setup Github Package Nuget Source
-      run: dotnet nuget add source --username ${{ secrets.GH_USER }} --password ${{ secrets.GH_TOKEN }} --store-password-in-clear-text --name github ${{ variables.ORG_NAMESPACE }}
+      run: dotnet nuget add source --username ${{ secrets.GH_USER }} --password ${{ secrets.GH_TOKEN }} --store-password-in-clear-text --name github $ORG_NAMESPACE
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
